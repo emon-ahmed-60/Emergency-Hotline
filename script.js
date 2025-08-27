@@ -11,7 +11,7 @@ for(const heartIcon of heartIcons){
 document.getElementById('cartContainer').addEventListener("click",(e)=>{
     let coin = document.getElementById('call-coin').innerText;
     if(coin < 20){
-        return alert("coin not enough");
+        return alert("coin is not enough for calling");
     }
 
     if(e.target.className.includes('call-btn')){
@@ -58,3 +58,16 @@ document.getElementById('cartContainer').addEventListener("click",(e)=>{
 document.getElementById('clear-btn').addEventListener("click",()=>{
     document.getElementById('call-history').innerHTML = '';
 })
+
+const copyBtns = document.getElementsByClassName('copy-btn');
+
+for(const btn of copyBtns){
+    btn.addEventListener("click",()=>{
+    const number = btn.parentNode.parentNode.children[3].innerText;
+    alert(number + ' number is copied');
+    navigator.clipboard.writeText(number);
+   let copyCount = document.getElementById('copy-count').innerText;
+   copyCount++;
+   document.getElementById('copy-count').innerText = copyCount;
+    })
+}
