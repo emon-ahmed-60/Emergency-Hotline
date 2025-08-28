@@ -10,7 +10,7 @@ querySelectorAll: Finds all elements that match a CSS selector. Returns a static
 ### How to Create and Insert a New Element
 Create: document.createElement('div')
 
-Add content/attributes: newDiv.innerText = 'Hello'
+Add content: newDiv.innerText = 'Hello'
 
 Insert: parent.appendChild(newDiv) 
 
