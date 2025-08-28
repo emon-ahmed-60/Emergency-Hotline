@@ -17,9 +17,9 @@ Insert: parent.appendChild(newDiv)
 ### Event Bubbling
 An event on an element first triggers on that element, then "bubbles up" to its parent, then the parent's parent, and so on, up the DOM tree.
 
-<div id="parent">
-  <button id="child">Click Me</button>
-</div>
+< div id="parent">
+  < button id="child">Click Me</ button>
+</ div>
 document.getElementById("child").addEventListener("click", () => {
   console.log("Child clicked");
 });
